@@ -36,7 +36,7 @@
             @csrf
             <div class="mb-3">
                 <label for="name" class="form-label">Your Name (optional)</label>
-                <input type="name" class="form-control"  id="name" aria-describedby="name">
+                <input type="text" name="name" class="form-control"  id="name" aria-describedby="name">
             </div>
 
             <div class="mb-3">
