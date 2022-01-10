@@ -19,7 +19,9 @@ class Create extends Component
 
     public function render()
     {
-        return view('livewire.answers.create', );
+        $user = User::where('token', $this->token)->first();
+
+        return view('livewire.answers.create', compact('user'));
     }
 
     public function submit() {
