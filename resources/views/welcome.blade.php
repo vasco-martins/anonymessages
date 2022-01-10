@@ -32,7 +32,6 @@
                     <label for="name" class="form-label">Share with your friends</label>
                     <input type="text" class="form-control" disabled value="{{ route('user.show', ['token' => $user->token]) }}"/>
                 </div>
-                <button class="btn btn-primary w-100" onclick="copy()" id="copy">Copy link</button>
             </div>
 
         </div>

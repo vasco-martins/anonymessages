@@ -27,18 +27,25 @@
         <label for="name" class="form-label">Share with your friends</label>
         <input type="text" class="form-control" disabled value="{{ route('user.show', ['token' => $user->token]) }}"/>
         </div>
-        <button class="btn btn-primary w-100" onclick="copy()" id="copy">Copy link</button>
     </div>
 
 </div>
-<script>
-    function copy() {
-        navigator.clipboard.writeText('{{ route('user.show', ['token' => $user->token]) }}');
-        document.querySelector('#copy').innerHTML = 'Copied';
-    }
-</script>
 @else
-    <livewire:answers.create :token="$user->token" />
+    <div class="card">
+        <form class="p-5" method="POST" action="{{ route('user.store', ['token' => $user->token])}}">
+            <div class="mb-3">
+                <label for="name" class="form-label">Your Name (optional)</label>
+                <input type="name" class="form-control" wire:model="name" id="name" aria-describedby="name">
+            </div>
+
+            <div class="mb-3">
+                <label for="message" class="form-label">Your Message to {{ $user->name }}</label>
+                <textarea type="message" class="form-control" wire:model="message" id="name" aria-describedby="message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Create</button>
+        </form>
+
+    </div>
 @endif
 
 <livewire:answers :token="$user->token" />
