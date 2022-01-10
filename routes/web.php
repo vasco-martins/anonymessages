@@ -19,4 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/u/{token}', [UserController::class, 'show'])->name('user.show');
-Route::get('/u/{token}', [UserController::class, 'store'])->name('user.store');
+Route::post('/u/{token}', [UserController::class, 'store'])->name('user.store');
