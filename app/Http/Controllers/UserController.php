@@ -26,7 +26,6 @@ class UserController extends Controller
             'message' => 'required'
         ]);
 
-        dd($data);
         Answer::create([
             'user_id' => $user->id,
             'name' => $data['name'],
