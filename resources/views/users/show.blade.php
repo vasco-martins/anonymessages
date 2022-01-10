@@ -33,6 +33,7 @@
 @else
     <div class="card">
         <form class="p-5" method="POST" action="{{ route('user.store', ['token' => $user->token])}}">
+            @csrf
             <div class="mb-3">
                 <label for="name" class="form-label">Your Name (optional)</label>
                 <input type="name" class="form-control" wire:model="name" id="name" aria-describedby="name">
