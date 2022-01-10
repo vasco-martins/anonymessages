@@ -19,7 +19,7 @@ class Answers extends Component
     public function render()
     {
         $user = User::where('token', $this->token)->first();
-        $answers = $user->answers;
+        $answers = $user->answers()->orderBy('id', 'DESC')->get();
         return view('livewire.answers', compact('answers', 'user'));
     }
 }
