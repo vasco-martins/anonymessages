@@ -52,8 +52,49 @@
 <livewire:answers :token="$user->token" />
 
 <script data-ad-client="ca-pub-8563666930526686" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8563666930526686"
-        crossorigin="anonymous"></script>
+<script type="module">
+
+    // Import the functions you need from the SDKs you need
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
+
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-analytics.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+
+    // Your web app's Firebase configuration
+
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+    const firebaseConfig = {
+
+        apiKey: "AIzaSyCNeh1REtiQaxrJF3zvFZ79gyMlzwx3gew",
+
+        authDomain: "anonymessages-31481.firebaseapp.com",
+
+        projectId: "anonymessages-31481",
+
+        storageBucket: "anonymessages-31481.appspot.com",
+
+        messagingSenderId: "1086287623479",
+
+        appId: "1:1086287623479:web:dd0b51fe631f94d76456b2",
+
+        measurementId: "G-VE3LK46HRY"
+
+    };
+
+
+    // Initialize Firebase
+
+    const app = initializeApp(firebaseConfig);
+
+    const analytics = getAnalytics(app);
+
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 @livewireScripts
 </body>
